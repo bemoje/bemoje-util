@@ -1,4 +1,4 @@
-import { KeyObjectifier } from './KeyObjectifier'
+import { KeyObjectifier } from '../src/KeyObjectifier'
 import { assert } from 'chai'
 
 describe('objectify', () => {
