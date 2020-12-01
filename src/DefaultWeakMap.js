@@ -1,0 +1,1 @@
+export { DefaultWeakMap } from 'mnemonist'

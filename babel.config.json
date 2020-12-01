@@ -1,0 +1,44 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"targets": {
+					"esmodules": true,
+					"node": true
+				},
+				"modules": "commonjs",
+				"useBuiltIns": "usage"
+			}
+		],
+		[
+			"minify",
+			{
+				"keepFnName": false
+			}
+		]
+	],
+	"plugins": [
+		[
+			"@babel/plugin-proposal-class-properties",
+			{
+				"loose": false
+			}
+		],
+		[
+			"@babel/plugin-transform-named-capturing-groups-regex"
+		],
+		[
+			"@babel/plugin-transform-modules-commonjs",
+			{
+				"lazy": []
+			}
+		],
+		[
+			"@babel/plugin-transform-classes"
+		],
+		[
+			"@babel/plugin-transform-arrow-functions"
+		]
+	]
+}

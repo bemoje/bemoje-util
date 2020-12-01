@@ -1,0 +1,6809 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            spellcheck='false'
+            autocapitalize='off'
+            autocorrect='off'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#api'
+                  class="">
+                  api
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arrswap'
+                  class="">
+                  arrSwap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#classof'
+                  class="">
+                  classOf
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getter'
+                  class="">
+                  getter
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#definelazyvalue'
+                  class="">
+                  defineLazyValue
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#defineloyalvalue'
+                  class="">
+                  defineLoyalValue
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#method'
+                  class="">
+                  method
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#defineproperty'
+                  class="">
+                  defineProperty
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setter'
+                  class="">
+                  setter
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#definevalue'
+                  class="">
+                  defineValue
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#definealias'
+                  class="">
+                  defineAlias
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#dirpath'
+                  class=" toggle-sibling">
+                  DIRPATH
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#dirpathdata'
+                        class='regular pre-open'>
+                        .DATA
+                      </a></li>
+                    
+                      <li><a
+                        href='#dirpathdesktop'
+                        class='regular pre-open'>
+                        .DESKTOP
+                      </a></li>
+                    
+                      <li><a
+                        href='#dirpathhome'
+                        class='regular pre-open'>
+                        .HOME
+                      </a></li>
+                    
+                      <li><a
+                        href='#dirpathtemp'
+                        class='regular pre-open'>
+                        .TEMP
+                      </a></li>
+                    
+                      <li><a
+                        href='#dirpathcwd'
+                        class='regular pre-open'>
+                        .CWD
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#ensurearrindexstrkeyisint'
+                  class="">
+                  ensureArrIndexStrKeyIsInt
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#global'
+                  class="">
+                  GLOBAL
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isarguments'
+                  class="">
+                  isArguments
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isarray'
+                  class="">
+                  isArray
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isbigint'
+                  class="">
+                  isBigint
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isboolean'
+                  class="">
+                  isBoolean
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isbuffer'
+                  class="">
+                  isBuffer
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isclass'
+                  class="">
+                  isClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isconstructor'
+                  class="">
+                  isConstructor
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isdate'
+                  class="">
+                  isDate
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isdefined'
+                  class="">
+                  isDefined
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iserror'
+                  class="">
+                  isError
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isfunction'
+                  class="">
+                  isFunction
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isgeneratorobject'
+                  class="">
+                  isGeneratorObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isiterable'
+                  class="">
+                  isIterable
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iskey'
+                  class="">
+                  isKey
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isnull'
+                  class="">
+                  isNull
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isnullorundefined'
+                  class="">
+                  isNullOrUndefined
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isnumber'
+                  class="">
+                  isNumber
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isobject'
+                  class="">
+                  isObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isprimitive'
+                  class="">
+                  isPrimitive
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isprototype'
+                  class="">
+                  isPrototype
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isregexp'
+                  class="">
+                  isRegExp
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isstring'
+                  class="">
+                  isString
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#issymbol'
+                  class="">
+                  isSymbol
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#istypedarray'
+                  class="">
+                  isTypedArray
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isundefined'
+                  class="">
+                  isUndefined
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isvalidlength'
+                  class="">
+                  isValidLength
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iswindow'
+                  class="">
+                  isWindow
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#objectify'
+                  class="">
+                  objectify
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#processpriority'
+                  class=" toggle-sibling">
+                  ProcessPriority
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#processpriorityconstants'
+                        class='regular pre-open'>
+                        .constants
+                      </a></li>
+                    
+                      <li><a
+                        href='#processprioritycodetolabel'
+                        class='regular pre-open'>
+                        .codeToLabel
+                      </a></li>
+                    
+                      <li><a
+                        href='#processprioritylabeltocode'
+                        class='regular pre-open'>
+                        .labelToCode
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#processprioritypid'
+                        class='regular pre-open'>
+                        #pid
+                      </a></li>
+                      
+                      <li><a
+                        href='#processprioritycode'
+                        class='regular pre-open'>
+                        #code
+                      </a></li>
+                      
+                      <li><a
+                        href='#processprioritylabel'
+                        class='regular pre-open'>
+                        #label
+                      </a></li>
+                      
+                      <li><a
+                        href='#processpriorityrefresh'
+                        class='regular pre-open'>
+                        #refresh
+                      </a></li>
+                      
+                      <li><a
+                        href='#processprioritylow'
+                        class='regular pre-open'>
+                        #LOW
+                      </a></li>
+                      
+                      <li><a
+                        href='#processprioritybelow_normal'
+                        class='regular pre-open'>
+                        #BELOW_NORMAL
+                      </a></li>
+                      
+                      <li><a
+                        href='#processprioritynormal'
+                        class='regular pre-open'>
+                        #NORMAL
+                      </a></li>
+                      
+                      <li><a
+                        href='#processpriorityabove_normal'
+                        class='regular pre-open'>
+                        #ABOVE_NORMAL
+                      </a></li>
+                      
+                      <li><a
+                        href='#processpriorityhigh'
+                        class='regular pre-open'>
+                        #HIGH
+                      </a></li>
+                      
+                      <li><a
+                        href='#processpriorityhighest'
+                        class='regular pre-open'>
+                        #HIGHEST
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sourcerefactorarrowfunctiontonamedfunction'
+                  class="">
+                  sourceRefactorArrowFunctionToNamedFunction
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#superof'
+                  class="">
+                  superOf
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#transferproperties'
+                  class="">
+                  transferProperties
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#transferproperty'
+                  class="">
+                  transferProperty
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#ts-tag'
+                  class="">
+                  ts-tag
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tstag'
+                  class="">
+                  tsTag
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tagtoclassname'
+                  class="">
+                  tagToClassName
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#classnametotag'
+                  class="">
+                  classNameToTag
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#classtotag'
+                  class="">
+                  classToTag
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#is'
+                  class="">
+                  is
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='api'>
+      api
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Traverse the prototype chain of a provided class function object, extracting an API overview of methods, getters,
+setters of static and prototype properties.</p>
+
+    <div class='pre p1 fill-light mt0'>api(klass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, toString: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;(APIElement | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>klass</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    the class function object to parse
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>toString</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>false</code>)</code>
+	    Instead of returning an Array of APIElement instances, return string
+representations/descriptions.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;(APIElement | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arrswap'>
+      arrSwap
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Swap array elements in place. Runtime: O(1)</p>
+
+    <div class='pre p1 fill-light mt0'>arrSwap(arr: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>, from: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, to: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+	    to be modified
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>from</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    index of the first element
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>to</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    index of the 2nd element
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='classof'>
+      classOf
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns the class constructor function that an object is associated with.</p>
+
+    <div class='pre p1 fill-light mt0'>classOf(target: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> </span>{}
+classOf(Hello.prototype)
+<span class="hljs-comment">//=&gt; Hello</span>
+classOf(<span class="hljs-keyword">new</span> Hello())
+<span class="hljs-comment">//=&gt; Hello</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">World</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Hello</span> </span>{}
+classOf(World.prototype)
+<span class="hljs-comment">//=&gt; World</span>
+classOf(<span class="hljs-keyword">new</span> World())
+<span class="hljs-comment">//=&gt; World</span>
+
+classOf(<span class="hljs-string">'string'</span>)
+<span class="hljs-comment">//=&gt; String</span>
+classOf(<span class="hljs-literal">true</span>)
+<span class="hljs-comment">//=&gt; Boolean</span>
+classOf(;(<span class="hljs-number">123</span>))
+<span class="hljs-comment">//=&gt; Number</span>
+classOf(<span class="hljs-literal">NaN</span>)
+<span class="hljs-comment">//=&gt; Number</span>
+classOf(<span class="hljs-literal">Infinity</span>)
+<span class="hljs-comment">//=&gt; Number</span>
+
+classOf(<span class="hljs-built_in">Object</span>.prototype)
+<span class="hljs-comment">//=&gt; Object</span>
+
+classOf(<span class="hljs-built_in">Function</span>.prototype)
+<span class="hljs-comment">//=&gt; Function</span>
+
+classOf(<span class="hljs-built_in">Array</span>.prototype)
+<span class="hljs-comment">//=&gt; Array</span>
+classOf([])
+<span class="hljs-comment">//=&gt; Array</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getter'>
+      getter
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A convenience method almost identical to @see Object.prototype.defineProperty except that the 'get' attribute can be
+set as arguments prior to the descriptor/attributes object.</p>
+
+    <div class='pre p1 fill-light mt0'>getter(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), get: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a> | any)?, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The property key.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>get</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a> | any)?)</code>
+	    The 'get' attribute of an own property descriptor. If 'get' is not a function, a
+function that returns the value is created and used in its place.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>attributes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    Own boolean attributes of an property descriptor attributes.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.enumerable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'enumerable' attribute. If true and 'this' is a prototype object, the
+property is removed from the descriptor in order to disallow setting enumerable properties on prototypes.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.configurable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>true</code>)
+  </td>
+  <td class='break-word'><span>The 'configurable' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.writable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'writable' attribute. If 'get' or 'set' are defined, this attribue is
+removed from the descriptor. This would cause an error, so this is just a convenient way to avoid it.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">this</span>._key = <span class="hljs-number">0</span>
+  }
+}
+
+<span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> A()
+
+defineGetter(A.prototype, <span class="hljs-string">'key'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._key
+})
+
+defineSetter(A.prototype, <span class="hljs-string">'key'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-keyword">this</span>._key = value
+})
+
+a.key
+<span class="hljs-comment">//=&gt; 0</span>
+
+a.key = <span class="hljs-number">23</span>
+
+a.key
+<span class="hljs-comment">//=&gt; 23</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='definelazyvalue'>
+      defineLazyValue
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Define a placeholder-accessor-property on the object such that the provided 'factory' function is not invoked until
+the property is accessed. When it is, the factory function is expected to return the 'real' property value. The
+property is reconfigured to hold a value instead of the placeholding accessor setup. The factory's return value is
+then set as value and also returned.</p>
+<p>If the property attribute 'writable' is true, a 'setter' is created. The setter will not invoke the factory function.
+This makes no sense if we are just about to replace it anyway with the value that the setter just received.</p>
+<p>Incidentally, if 'defineLazyValue' is called with a prototype object as the execution context, when its time to
+replace the surrogate accessor property, then instead of setting the new value via the factory function, it will
+instead be set on the object that at the time is the execution context ('this'). This is most likely the use case.
+One might be interested in setting a property on all instances of a class, but not until it is needed. So we can
+define it lazily with 'defineLazyValue'.</p>
+
+    <div class='pre p1 fill-light mt0'>defineLazyValue(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), factory: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The property key.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>factory</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    A factory function that when invoked, returns the property value.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>attributes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    Own boolean attributes of an property descriptor attributes.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.enumerable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'enumerable' attribute. If true and 'this' is a prototype object, the
+property is removed from the descriptor in order to disallow setting enumerable properties on prototypes.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.configurable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>true</code>)
+  </td>
+  <td class='break-word'><span>The 'configurable' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.writable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'writable' attribute. If 'get' or 'set' are defined, this attribue is
+removed from the descriptor. This would cause an error, so this is just a convenient way to avoid it.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ins</span> </span>{
+  doneWork = <span class="hljs-literal">false</span>
+}
+
+<span class="hljs-comment">// 'factory' example</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">heavyComputation</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// factory's 'this'-context is the instance</span>
+  <span class="hljs-keyword">this</span>.doneWork = <span class="hljs-literal">true</span>
+
+  <span class="hljs-comment">// do "heavy" work</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-number">40</span> + <span class="hljs-number">2</span>
+}
+
+<span class="hljs-comment">// create lazy value property</span>
+Ins.prototype.defineLazyValue(<span class="hljs-string">'lazyValue'</span>, heavyComputation, {
+  <span class="hljs-comment">// writable -&gt; create setter</span>
+  <span class="hljs-attr">writable</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>,
+})
+
+<span class="hljs-comment">// instances</span>
+<span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> Ins()
+<span class="hljs-keyword">const</span> b = <span class="hljs-keyword">new</span> Ins()
+
+<span class="hljs-comment">// console log</span>
+<span class="hljs-keyword">const</span> logValue = <span class="hljs-function">(<span class="hljs-params">result</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'\nvalue: '</span> + result)
+<span class="hljs-keyword">const</span> status = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'\n'</span>, a, <span class="hljs-string">'\n'</span>, b, <span class="hljs-string">'\n'</span>)
+
+<span class="hljs-comment">// demo</span>
+status()
+
+logValue(a.lazyValue)
+status()
+
+a.lazyValue = <span class="hljs-string">'overwrite after'</span>
+logValue(a.lazyValue)
+status()
+
+b.lazyValue = <span class="hljs-string">'overwrite before'</span>
+logValue(b.lazyValue)
+status()
+
+<span class="hljs-comment">//=&gt; [CONSOLE OUTPUT]:</span>
+<span class="hljs-comment">// ------------------</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//  Ins { doneWork: false }</span>
+<span class="hljs-comment">//  Ins { doneWork: false }</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// value: 42</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//  Ins { doneWork: true, lazyValue: 42 }</span>
+<span class="hljs-comment">//  Ins { doneWork: false }</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// value: overwrite after</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//  Ins { doneWork: true, lazyValue: 'overwrite after' }</span>
+<span class="hljs-comment">//  Ins { doneWork: false }</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// value: overwrite before</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//  Ins { doneWork: true, lazyValue: 'overwrite after' }</span>
+<span class="hljs-comment">//  Ins { doneWork: false, lazyValue: 'overwrite before' }</span>
+<span class="hljs-comment">//</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='defineloyalvalue'>
+      defineLoyalValue
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The provided 'factory' function works as a property value initializer. Actually, a getter accessor property is
+created. The getter however, will use the factory to create a 'fresh' value if the executing 'this' context has
+changed.</p>
+<p>For example, imagine we want a static class property that is an array containing instances of the class. If the class
+is extended, the extension class will then be putting its instances into its super-class's array. If this is not
+desired, this is where 'defineLoyalValue' is handy. If the execution context has changed, and in this case it has,
+because the new context is the sub-class. Then a new array could be created instead of pointing to the original if
+the factory returned a fresh array. See the example.</p>
+
+    <div class='pre p1 fill-light mt0'>defineLoyalValue(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), factory: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The property key.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>factory</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    A factory function that when invoked, returns the property value.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>attributes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    Own boolean attributes of an property descriptor attributes.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.enumerable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'enumerable' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.configurable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'configurable' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.writable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'writable' attribute.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">this</span>.index = ++<span class="hljs-keyword">this</span>.nextIndex
+    <span class="hljs-keyword">this</span>.instances.push(<span class="hljs-keyword">this</span>)
+  }
+}
+
+defineLoyalValue(A.prototype, <span class="hljs-string">'instances'</span>, () =&gt; [])
+defineLoyalValue(A.prototype, <span class="hljs-string">'nextIndex'</span>, () =&gt; <span class="hljs-number">0</span>, { <span class="hljs-attr">writable</span>: <span class="hljs-literal">true</span> })
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">super</span>()
+  }
+}
+
+<span class="hljs-keyword">new</span> A()
+<span class="hljs-keyword">new</span> A()
+<span class="hljs-keyword">new</span> B()
+<span class="hljs-keyword">new</span> B()
+<span class="hljs-keyword">new</span> A()
+
+A.prototype.instances
+<span class="hljs-comment">//=&gt; [ A { index: 1 }, A { index: 2 }, A { index: 3 }</span>
+
+B.prototype.instances
+<span class="hljs-comment">//=&gt; [ B { index: 1 }, B { index: 2 } ]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='method'>
+      method
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A convenience method almost identical to @see Object.prototype.defineProperty except that the 'value' attribute can be
+set as argument, 'f' prior to the descriptor/attributes object.</p>
+<p>If 'f' is a named function, then the 'key' argument can be omitted entirely. If key is not omitted and 'f' is
+not a named function, then its name will be set to that of 'key', unless 'key' is a symbol type, then the symbol's
+inner description will become the function name.</p>
+
+    <div class='pre p1 fill-light mt0'>method(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), f: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The property key.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>f</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    The 'value' attribute of an own property descriptor (expecting a function).
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>attributes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    Own boolean attributes of an property descriptor attributes.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.enumerable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'enumerable' attribute. If true and 'this' is a prototype object, the
+property is removed from the descriptor in order to disallow setting enumerable properties on prototypes.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.configurable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>true</code>)
+  </td>
+  <td class='break-word'><span>The 'configurable' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.writable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'writable' attribute. If 'get' or 'set' are defined, this attribue is
+removed from the descriptor. This would cause an error, so this is just a convenient way to avoid it.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{}
+
+defineMethod(A.prototype, <span class="hljs-string">'hello'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-string">'world'</span>
+})
+
+defineMethod(A.prototype, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hi</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-string">'there'</span>
+})
+
+<span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> A()
+
+a.hello()
+<span class="hljs-comment">//=&gt; 'world'</span>
+
+a.hi()
+<span class="hljs-comment">//=&gt; 'there'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='defineproperty'>
+      defineProperty
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Based on Reflect.defineProperty. The differences are:</p>
+<ul>
+<li>configurable is true by default</li>
+<li>writable removed from descriptor if has accessors</li>
+<li>returns 'target' object unless thats a prototype object, then return target.constructor</li>
+<li>disallows defining enumerable properties on prototype objects</li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>defineProperty(target: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), descriptor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The target object
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The property key.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>descriptor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    The own property descriptor.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>descriptor.enumerable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'enumerable' attribute. If true and 'this' is a prototype object, the
+property is removed from the descriptor in order to disallow setting enumerable properties on prototypes.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>descriptor.configurable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>true</code>)
+  </td>
+  <td class='break-word'><span>The 'configurable' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>descriptor.writable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'writable' attribute. If 'get' or 'set' are defined, this attribue is
+removed from the descriptor. This would cause an error, so this is just a convenient way to avoid it.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>descriptor.value</span> <code class='quiet'>any?</code>
+  </td>
+  <td class='break-word'><span>The 'value' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>descriptor.get</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'get' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>descriptor.set</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'set' attribute.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setter'>
+      setter
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A convenience method almost identical to @see Object.prototype.defineProperty except that the 'set' attribute can be
+set as arguments prior to the descriptor/attributes object.</p>
+
+    <div class='pre p1 fill-light mt0'>setter(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), set: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>?, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The property key.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>set</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>?)</code>
+	    The 'set' attribute of an own property descriptor.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>attributes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    Own boolean attributes of an property descriptor attributes.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.enumerable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'enumerable' attribute. If true and 'this' is a prototype object, the
+property is removed from the descriptor in order to disallow setting enumerable properties on prototypes.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.configurable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>true</code>)
+  </td>
+  <td class='break-word'><span>The 'configurable' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.writable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'writable' attribute. If 'get' or 'set' are defined, this attribue is
+removed from the descriptor. This would cause an error, so this is just a convenient way to avoid it.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">this</span>._key = <span class="hljs-number">0</span>
+  }
+}
+
+<span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> A()
+
+defineGetter(A.prototype, <span class="hljs-string">'key'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._key
+})
+
+defineSetter(A.prototype, <span class="hljs-string">'key'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-keyword">this</span>._key = value
+})
+
+a.key
+<span class="hljs-comment">//=&gt; 0</span>
+
+a.key = <span class="hljs-number">23</span>
+
+a.key
+<span class="hljs-comment">//=&gt; 23</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='definevalue'>
+      defineValue
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A convenience method almost identical to @see Object.prototype.defineProperty except that the 'value' attribute can be
+set as arguments prior to the descriptor/attributes object.</p>
+
+    <div class='pre p1 fill-light mt0'>defineValue(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), value: any?, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The property key.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any?)</code>
+	    The 'value' attribute of an own property descriptor.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>attributes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    Own boolean attributes of an property descriptor attributes.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.enumerable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'enumerable' attribute. If true and 'this' is a prototype object, the
+property is removed from the descriptor in order to disallow setting enumerable properties on prototypes.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.configurable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>true</code>)
+  </td>
+  <td class='break-word'><span>The 'configurable' attribute.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>attributes.writable</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>The 'writable' attribute. If 'get' or 'set' are defined, this attribue is
+removed from the descriptor. This would cause an error, so this is just a convenient way to avoid it.
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> o = {}
+<span class="hljs-built_in">console</span>.log(defineValue(o, <span class="hljs-string">'a'</span>, <span class="hljs-number">23</span>, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span> }))
+<span class="hljs-comment">//=&gt; { a: 23 }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='definealias'>
+      defineAlias
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create property key aliases.</p>
+<p>If the object is a prototype object and no property exists on it by the name of 'key', it is assumed that it is meant
+to be found on its associated instances, in which case an accessor 'getter' property that returns the value at 'key'
+is created instead of a direct reference value. When aliasing instance properties, it makes sense to perform aliasing
+on the prototype like this, since it is 'cheaper' in terms of performance because then it's not necessary to create
+the alias-property on each instance, but just this once on the prototype.</p>
+
+    <div class='pre p1 fill-light mt0'>defineAlias(target: any, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), aliases: ...(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The property key.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>aliases</span> <code class='quiet'>(...(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>)
+            = <code>[]</code>)</code>
+	    Aliases for 'key'.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">static</span> analyze() {}
+
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">this</span>.i = <span class="hljs-number">0</span>
+  }
+}
+
+
+defineAlias(A, <span class="hljs-string">'analyze'</span>, <span class="hljs-string">'analyse'</span>)
+
+A.analyze === A.analyse
+<span class="hljs-comment">//=&gt; true</span>
+
+
+defineAlias(A.prototype, <span class="hljs-string">'i'</span>, <span class="hljs-string">'index'</span>)
+<span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> A()
+
+a.i === a.index
+<span class="hljs-comment">//=&gt; true</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='dirpath'>
+      DIRPATH
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get paths from the running enviromment.
+Windows, OS X and common Linux distributions are supported.</p>
+
+    <div class='pre p1 fill-light mt0'>new DIRPATH()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='dirpathdata'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>DATA(paths)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get the running environment operating system's logged in user's appdata path.</p>
+
+    <div class='pre p1 fill-light mt0'>DATA(paths: ...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>paths</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>[]</code>)</code>
+	    additional path names may be added and they will be joined into the returned path string.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>DIRPATH.DATA(<span class="hljs-string">'some'</span>, <span class="hljs-string">'dir'</span>, <span class="hljs-string">'file.js'</span>)
+<span class="hljs-comment">//=&gt; 'C:/Users/User/AppData/Roaming/some/dir/file.js',</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dirpathdesktop'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>DESKTOP(paths)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get the running environment operating system's logged in user's desktop path.</p>
+
+    <div class='pre p1 fill-light mt0'>DESKTOP(paths: ...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>paths</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>[]</code>)</code>
+	    additional path names may be added and they will be joined into the returned path string.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>DIRPATH.DESKTOP(<span class="hljs-string">'some'</span>, <span class="hljs-string">'dir'</span>, <span class="hljs-string">'file.js'</span>)
+<span class="hljs-comment">//=&gt; 'C:/Users/User/Desktop/some/dir/file.js',</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dirpathhome'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>HOME(paths)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get the running environment operating system's logged in user's home path.</p>
+
+    <div class='pre p1 fill-light mt0'>HOME(paths: ...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>paths</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>[]</code>)</code>
+	    additional path names may be added and they will be joined into the returned path string.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>DIRPATH.HOME(<span class="hljs-string">'some'</span>, <span class="hljs-string">'dir'</span>, <span class="hljs-string">'file.js'</span>)
+<span class="hljs-comment">//=&gt; 'C:/Users/User/some/dir/file.js',</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dirpathtemp'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>TEMP(paths)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get the running environment operating system's logged in user's path for temporary files.</p>
+
+    <div class='pre p1 fill-light mt0'>TEMP(paths: ...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>paths</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>[]</code>)</code>
+	    additional path names may be added and they will be joined into the returned path string.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>DIRPATH.TEMP(<span class="hljs-string">'some'</span>, <span class="hljs-string">'dir'</span>, <span class="hljs-string">'file.js'</span>)
+<span class="hljs-comment">//=&gt; 'C:/Users/User/AppData/Local/Temp/some/dir/file.js',</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dirpathcwd'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>CWD(paths)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get the current working directory of the current process.</p>
+
+    <div class='pre p1 fill-light mt0'>CWD(paths: ...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>paths</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>[]</code>)</code>
+	    additional path names may be added and they will be joined into the returned path string.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>DIRPATH.CWD(<span class="hljs-string">'some'</span>, <span class="hljs-string">'dir'</span>, <span class="hljs-string">'file.js'</span>)
+<span class="hljs-comment">//=&gt; 'C:/WINDOWS/system32/some/dir/file.js'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='ensurearrindexstrkeyisint'>
+      ensureArrIndexStrKeyIsInt
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Ensures that numeric integer string representations are turned into integers.
+This function assumes that the key is either an array index number (integer), a string or a symbol.</p>
+
+    <div class='pre p1 fill-light mt0'>ensureArrIndexStrKeyIsInt(key: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='global'>
+      GLOBAL
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The global object in the current running environment.
+This object is set on the global object, so that it can always be referencéd as 'GLOBAL'.</p>
+
+    <div class='pre p1 fill-light mt0'>GLOBAL</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isarguments'>
+      isArguments
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine whether a value is an Arguments object</p>
+
+    <div class='pre p1 fill-light mt0'>isArguments(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isarray'>
+      isArray
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is an array</p>
+
+    <div class='pre p1 fill-light mt0'>isArray</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isbigint'>
+      isBigint
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a (typeof) bigint</p>
+
+    <div class='pre p1 fill-light mt0'>isBigint(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isboolean'>
+      isBoolean
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>isBoolean(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isbuffer'>
+      isBuffer
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine whether a value is a Buffer</p>
+
+    <div class='pre p1 fill-light mt0'>isBuffer(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isclass'>
+      isClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine whether a value is a class constructor function</p>
+
+    <div class='pre p1 fill-light mt0'>isClass(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isconstructor'>
+      isConstructor
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine if value is a constructor function</p>
+
+    <div class='pre p1 fill-light mt0'>isConstructor(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isdate'>
+      isDate
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a Date</p>
+
+    <div class='pre p1 fill-light mt0'>isDate(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isdefined'>
+      isDefined
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a Undefined</p>
+
+    <div class='pre p1 fill-light mt0'>isDefined(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iserror'>
+      isError
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a Error</p>
+
+    <div class='pre p1 fill-light mt0'>isError(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isfunction'>
+      isFunction
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a Function</p>
+
+    <div class='pre p1 fill-light mt0'>isFunction(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isgeneratorobject'>
+      isGeneratorObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter a value is the iterable object returned from an invoked GeneratorFunction</p>
+
+    <div class='pre p1 fill-light mt0'>isGeneratorObject(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isiterable'>
+      isIterable
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is an array</p>
+
+    <div class='pre p1 fill-light mt0'>isIterable(v: any, value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>v</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        fork of 
+<a href="https://github.com/hemanth/is-iterable">https://github.com/hemanth/is-iterable</a>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iskey'>
+      isKey
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine whether a value could be a property key, ie. it being either a string or symbol</p>
+
+    <div class='pre p1 fill-light mt0'>isKey(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isnull'>
+      isNull
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a Null</p>
+
+    <div class='pre p1 fill-light mt0'>isNull(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isnullorundefined'>
+      isNullOrUndefined
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>isNullOrUndefined(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isnumber'>
+      isNumber
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a Number</p>
+
+    <div class='pre p1 fill-light mt0'>isNumber(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isobject'>
+      isObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a Object
+Definition summary: is typeof object but not null</p>
+
+    <div class='pre p1 fill-light mt0'>isObject(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isprimitive'>
+      isPrimitive
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a Primitive</p>
+
+    <div class='pre p1 fill-light mt0'>isPrimitive(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isprototype'>
+      isPrototype
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter a given object is a prototype-object.
+Definition summary: obj.constructor.prototype === obj</p>
+
+    <div class='pre p1 fill-light mt0'>isPrototype(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isregexp'>
+      isRegExp
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a RegExp</p>
+
+    <div class='pre p1 fill-light mt0'>isRegExp(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isstring'>
+      isString
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>isString(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='issymbol'>
+      isSymbol
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a Symbol</p>
+
+    <div class='pre p1 fill-light mt0'>isSymbol(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='istypedarray'>
+      isTypedArray
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine if a value is a TypedArray</p>
+
+    <div class='pre p1 fill-light mt0'>isTypedArray(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isundefined'>
+      isUndefined
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is undefined</p>
+
+    <div class='pre p1 fill-light mt0'>isUndefined(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isvalidlength'>
+      isValidLength
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine if a value is applicable as a length for array-like collections.</p>
+
+    <div class='pre p1 fill-light mt0'>isValidLength(v: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>v</span> <code class='quiet'>(any)</code>
+	    the value
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iswindow'>
+      isWindow
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Determine wheter the argument is a browser's global object, 'window'</p>
+
+    <div class='pre p1 fill-light mt0'>isWindow(v: any, value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>v</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='objectify'>
+      objectify
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Symbol, index and string keys are hashed and</p>
+
+    <div class='pre p1 fill-light mt0'>objectify(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The key to objectify
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='processpriority'>
+      ProcessPriority
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Easily set process priority. Based on the node native 'os' module.</p>
+
+    <div class='pre p1 fill-light mt0'>new ProcessPriority(pid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>process.pid</code>)</code>
+	    process id (integer)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> instance = <span class="hljs-keyword">new</span> ProcessPriority(process.pid)
+
+instance
+<span class="hljs-comment">//=&gt; ProcessPriority { pid: 16328, code: 0, label: 'NORMAL' }</span>
+
+instance.HIGH()
+<span class="hljs-comment">//=&gt; ProcessPriority { pid: 16328, code: -14, label: 'HIGH' }</span>
+
+ProcessPriority.constants
+ <span class="hljs-comment">// [Object: null prototype] {</span>
+ <span class="hljs-comment">//   PRIORITY_LOW: 19,</span>
+ <span class="hljs-comment">//   PRIORITY_BELOW_NORMAL: 10,</span>
+ <span class="hljs-comment">//   PRIORITY_NORMAL: 0,</span>
+ <span class="hljs-comment">//   PRIORITY_ABOVE_NORMAL: -7,</span>
+ <span class="hljs-comment">//   PRIORITY_HIGH: -14,</span>
+ <span class="hljs-comment">//   PRIORITY_HIGHEST: -20</span>
+ <span class="hljs-comment">// }</span>
+
+ ProcessPriority.labelToCode(<span class="hljs-string">'LOW'</span>)
+ <span class="hljs-comment">//=&gt; 19</span>
+ ProcessPriority.labelToCode(<span class="hljs-string">'BELOW_NORMAL'</span>)
+ <span class="hljs-comment">//=&gt; 10</span>
+ ProcessPriority.labelToCode(<span class="hljs-string">'NORMAL'</span>)
+ <span class="hljs-comment">//=&gt; 0</span>
+ ProcessPriority.labelToCode(<span class="hljs-string">'ABOVE_NORMAL'</span>)
+ <span class="hljs-comment">//=&gt; -7</span>
+ ProcessPriority.labelToCode(<span class="hljs-string">'HIGH'</span>)
+ <span class="hljs-comment">//=&gt; -14</span>
+ ProcessPriority.labelToCode(<span class="hljs-string">'HIGHEST'</span>)
+ <span class="hljs-comment">//=&gt; -22</span>
+
+ ProcessPriority.codeToLabel(<span class="hljs-number">19</span>)
+ <span class="hljs-comment">//=&gt; LOW</span>
+ ProcessPriority.codeToLabel(<span class="hljs-number">10</span>)
+ <span class="hljs-comment">//=&gt; BELOW_NORMAL</span>
+ ProcessPriority.codeToLabel(<span class="hljs-number">0</span>)
+ <span class="hljs-comment">//=&gt; NORMAL</span>
+ ProcessPriority.codeToLabel(<span class="hljs-number">-7</span>)
+ <span class="hljs-comment">//=&gt; ABOVE_NORMAL</span>
+ ProcessPriority.codeToLabel(<span class="hljs-number">-14</span>)
+ <span class="hljs-comment">//=&gt; HIGH</span>
+ ProcessPriority.codeToLabel(<span class="hljs-number">-22</span>)
+ <span class="hljs-comment">//=&gt; HIGHEST</span></pre>
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='processpriorityconstants'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>constants</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  
+    <div class='pre p1 fill-light mt0'>constants</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>constants</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+          : map of used constants integer codes and string labels
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processprioritycodetolabel'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>codeToLabel(code)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Returns the label that matches the code integer.</p>
+
+    <div class='pre p1 fill-light mt0'>codeToLabel(code: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>code</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processprioritylabeltocode'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>labelToCode(label)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Returns the integer code that matches a given label.</p>
+
+    <div class='pre p1 fill-light mt0'>labelToCode(label: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>label</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='processprioritypid'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>pid</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  
+    <div class='pre p1 fill-light mt0'>pid</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>pid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : An integer identifier for the process id.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processprioritycode'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>code</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  
+    <div class='pre p1 fill-light mt0'>code</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>code</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : An integer identifier for the process priority.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processprioritylabel'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>label</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  
+    <div class='pre p1 fill-light mt0'>label</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>label</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : labels the process priority.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processpriorityrefresh'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>refresh()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Refreshes the code and label properties on the object by pulling the latest info about the process from the running operating system.</p>
+
+    <div class='pre p1 fill-light mt0'>refresh(): <a href="#processpriority">ProcessPriority</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#processpriority">ProcessPriority</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processprioritylow'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>LOW(pid)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Sets the process' priority to LOW</p>
+
+    <div class='pre p1 fill-light mt0'>LOW(pid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="#processpriority">ProcessPriority</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    process id
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#processpriority">ProcessPriority</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processprioritybelow_normal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>BELOW_NORMAL(pid)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Sets the process' priority to BELOW_NORMAL</p>
+
+    <div class='pre p1 fill-light mt0'>BELOW_NORMAL(pid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="#processpriority">ProcessPriority</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    process id
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#processpriority">ProcessPriority</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processprioritynormal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>NORMAL(pid)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Sets the process' priority to NORMAL</p>
+
+    <div class='pre p1 fill-light mt0'>NORMAL(pid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="#processpriority">ProcessPriority</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    process id
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#processpriority">ProcessPriority</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processpriorityabove_normal'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>ABOVE_NORMAL(pid)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Sets the process' priority to ABOVE_NORMAL</p>
+
+    <div class='pre p1 fill-light mt0'>ABOVE_NORMAL(pid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="#processpriority">ProcessPriority</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    process id
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#processpriority">ProcessPriority</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processpriorityhigh'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>HIGH(pid)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Sets the process' priority to HIGH</p>
+
+    <div class='pre p1 fill-light mt0'>HIGH(pid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="#processpriority">ProcessPriority</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    process id
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#processpriority">ProcessPriority</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='processpriorityhighest'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>HIGHEST(pid)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Sets the process' priority to HIGHEST</p>
+
+    <div class='pre p1 fill-light mt0'>HIGHEST(pid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="#processpriority">ProcessPriority</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    process id
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#processpriority">ProcessPriority</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sourcerefactorarrowfunctiontonamedfunction'>
+      sourceRefactorArrowFunctionToNamedFunction
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Change arrow function source string into a regular named function.</p>
+
+    <div class='pre p1 fill-light mt0'>sourceRefactorArrowFunctionToNamedFunction(f: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>f</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>))</code>
+	    the function or its source code
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='superof'>
+      superOf
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns the super class constructor of an object</p>
+
+    <div class='pre p1 fill-light mt0'>superOf(target: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wow</span> </span>{}
+superOf(Wow.prototype)
+<span class="hljs-comment">//=&gt; Object</span>
+superOf(<span class="hljs-keyword">new</span> Wow())
+<span class="hljs-comment">//=&gt; Object</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cool</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Wow</span> </span>{}
+superOf(Cool.prototype)
+<span class="hljs-comment">//=&gt; Wow</span>
+superOf(<span class="hljs-keyword">new</span> Cool())
+<span class="hljs-comment">//=&gt; Wow</span>
+
+superOf(<span class="hljs-built_in">Object</span>.prototype)
+<span class="hljs-comment">//=&gt; null</span>
+
+superOf(<span class="hljs-string">'string'</span>)
+<span class="hljs-comment">//=&gt; Object</span>
+superOf(<span class="hljs-literal">true</span>)
+<span class="hljs-comment">//=&gt; Object</span>
+superOf((<span class="hljs-number">123</span>))
+<span class="hljs-comment">//=&gt; Object</span>
+
+superOf(<span class="hljs-built_in">Function</span>.prototype)
+<span class="hljs-comment">//=&gt; Object</span>
+
+superOf(<span class="hljs-built_in">Array</span>.prototype)
+<span class="hljs-comment">//=&gt; Object</span>
+superOf([<span class="hljs-number">2</span>])
+<span class="hljs-comment">//=&gt; Object</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wow</span> </span>{}
+superOf(Wow)
+<span class="hljs-comment">//=&gt; Object</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cool</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Wow</span> </span>{}
+superOf(Cool)
+<span class="hljs-comment">//=&gt; Wow</span>
+
+superOf(<span class="hljs-built_in">Object</span>)
+<span class="hljs-comment">//=&gt; null</span>
+
+superOf(<span class="hljs-built_in">Function</span>)
+<span class="hljs-comment">//=&gt; Object</span>
+superOf((<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}))
+<span class="hljs-comment">//=&gt; Object</span>
+superOf((<span class="hljs-function"><span class="hljs-keyword">function</span>* (<span class="hljs-params"></span>) </span>{}))
+<span class="hljs-comment">//=&gt; Object</span>
+superOf(<span class="hljs-function">(<span class="hljs-params">(</span>) =&gt;</span> {}))
+<span class="hljs-comment">//=&gt; Object</span>
+
+superOf(<span class="hljs-built_in">Array</span>)
+<span class="hljs-comment">//=&gt; Object</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='transferproperties'>
+      transferProperties
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>transferProperties(target: any, source: any, filter: any): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>source</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>filter</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='transferproperty'>
+      transferProperty
+    </h3>
+    
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>transferProperty(target: any, key: any, source: any): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>source</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='ts-tag'>
+      ts-tag
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Object.prototype.toString util. Features methods that get</p>
+<ul>
+<li>tag       from: object, class or className</li>
+<li>className from: object or tag</li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>ts-tag</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tstag'>
+      tsTag
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns toStringTag or class-name from object, utilizing @see Object.prototype.toString</p>
+
+    <div class='pre p1 fill-light mt0'>tsTag(object: any, className: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>object</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>className</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>false</code>)</code>
+	    Whether to return the class name part of the tag instead of the whole tag.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        toStringTag
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// get full toStringTag</span>
+tsTag(<span class="hljs-regexp">/abc/</span>)
+<span class="hljs-comment">//=&gt; '[object RegExp]'</span>
+
+
+<span class="hljs-comment">// get only the className part of the tag</span>
+tsTag(<span class="hljs-regexp">/abc/</span>, <span class="hljs-literal">true</span>)
+<span class="hljs-comment">//=&gt; 'RegExp'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tagtoclassname'>
+      tagToClassName
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Convert a class/constructor to a toStringTag</p>
+
+    <div class='pre p1 fill-light mt0'>tagToClassName(tag: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tag</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        toStringTag
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">import</span> { tagToClassName } <span class="hljs-keyword">from</span> <span class="hljs-string">'ts-tag'</span>
+
+tagToClassName(<span class="hljs-string">'[object Array]'</span>)
+<span class="hljs-comment">//=&gt; 'Array'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='classnametotag'>
+      classNameToTag
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Convert a class/constructor name to a toStringTag</p>
+
+    <div class='pre p1 fill-light mt0'>classNameToTag(className: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>className</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        toStringTag
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">import</span> { classNameToTag } <span class="hljs-keyword">from</span> <span class="hljs-string">'ts-tag'</span>
+
+classNameToTag(<span class="hljs-string">'Array'</span>)
+<span class="hljs-comment">//=&gt; '[object Array]'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='classtotag'>
+      classToTag
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Convert a class/constructor to a toStringTag</p>
+
+    <div class='pre p1 fill-light mt0'>classToTag(klass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>klass</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    constructor function
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        toStringTag
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">import</span> { convert } <span class="hljs-keyword">from</span> <span class="hljs-string">'ts-tag'</span>
+
+convert.classToTag(<span class="hljs-built_in">Array</span>)
+<span class="hljs-comment">//=&gt; '[object Array]'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='is'>
+      is
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets or creates a validator in a className-keyed cache.
+If a value is provided, it is passed to the validator and the result of that is returned. Else, return validator.</p>
+
+    <div class='pre p1 fill-light mt0'>is(type: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>), value: any?): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>type</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>))</code>
+	    toStringTag, class-name or constructor
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any?)</code>
+	    a value to validate. If omitted, the validator is returned.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>:
+        function is
+<a href="value">className</a>
+ {}
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// import</span>
+<span class="hljs-keyword">import</span> { is } <span class="hljs-keyword">from</span> <span class="hljs-string">'ts-tag'</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// require</span>
+<span class="hljs-keyword">const</span> { is } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ts-tag'</span>)</pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// invoke-validator immediately on a value</span>
+is(<span class="hljs-built_in">String</span>, <span class="hljs-string">'wow'</span>)
+<span class="hljs-comment">//=&gt; true</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// BEST PERFORMANCE: create-reusable type validator</span>
+<span class="hljs-keyword">const</span> isString = is(<span class="hljs-built_in">String</span>)
+
+isString(<span class="hljs-string">'wow'</span>)
+<span class="hljs-comment">//=&gt; true</span>
+
+isString(<span class="hljs-number">3</span>)
+<span class="hljs-comment">//=&gt; false</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// This syntax is equivalent</span>
+is(<span class="hljs-built_in">RegExp</span>)
+
+is.RegExp(<span class="hljs-string">'wow'</span>)
+<span class="hljs-comment">//=&gt; false</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Accepted as first argument, 'type': constructors, class-names or toString-tags</span>
+is(<span class="hljs-built_in">RegExp</span>)
+is(<span class="hljs-string">'RegExp'</span>)
+is(<span class="hljs-string">'[object RegExp]'</span>)
+
+<span class="hljs-comment">// this cannot come first, but as soon as the generator is cached, it is available as a property on 'is'</span>
+is.RegExp === is(<span class="hljs-built_in">RegExp</span>)
+<span class="hljs-comment">//=&gt; true</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// THIS EXAMPLE EXPLAINS HOW THE CHECKS WORK UNDER THE HOOD, JUST THAT</span>
+<span class="hljs-comment">// -------------------------------------------------------------------</span>
+
+<span class="hljs-comment">// The checks are based on comparing tags returned from Object.prototype.toString.</span>
+<span class="hljs-built_in">Object</span>.prototype.toString.call([])
+<span class="hljs-comment">//=&gt; [object Array]</span>
+
+
+<span class="hljs-comment">// This is how a validator simply works under the hood. A known tag is compared to tags of objects.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isArray</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.prototype.toString.call(value) === <span class="hljs-string">'[object Array]'</span>
+}
+
+isArray([])
+<span class="hljs-comment">//=&gt; true</span>
+
+
+<span class="hljs-comment">// This module simplifies creating these validators to this:</span>
+<span class="hljs-keyword">import</span> { is } <span class="hljs-keyword">from</span> <span class="hljs-string">'ts-tag'</span>
+
+<span class="hljs-keyword">const</span> isRegExp = is(<span class="hljs-built_in">RegExp</span>)
+
+isRegExp(<span class="hljs-regexp">/re/</span>)
+<span class="hljs-comment">//=&gt; true</span>
+
+
+<span class="hljs-comment">// create more?</span>
+<span class="hljs-keyword">const</span> isString = is(<span class="hljs-built_in">String</span>)
+<span class="hljs-keyword">const</span> isFunction = is(<span class="hljs-built_in">Function</span>)
+<span class="hljs-keyword">const</span> isGeneratorFunction = is(<span class="hljs-string">'GeneratorFunction'</span>)
+
+isString(<span class="hljs-string">'abc'</span>)
+<span class="hljs-comment">//=&gt; true</span>
+isFunction(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{})
+<span class="hljs-comment">//=&gt; true</span>
+isGeneratorFunction(<span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">gf</span>(<span class="hljs-params"></span>) </span>{})
+<span class="hljs-comment">//=&gt; true</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

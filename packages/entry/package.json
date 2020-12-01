@@ -1,0 +1,24 @@
+{
+	"name": "entry",
+	"private": true,
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"module": "main.js",
+	"dependencies": {
+		"esm": "^3.2.25"
+	},
+	"scripts": {
+		"types": "tsc index.js -d --allowJs --outFile index.d.ts --disableSizeLimit --emitDeclarationOnly --lib ESNext -m ESNext -t ESNext --pretty --esModuleInterop --allowSyntheticDefaultImports",
+		"docs:site": "documentation build main.js -f html -o docs",
+		"docs:md": "documentation build main.js -f md -o api.md",
+		"docs:readme": "documentation readme main.js --section=API",
+		"docs:serve": "documentation servetests.js",
+		"docs": "npm run docs:readme && npm run docs:site",
+		"build": "npm run rollup && npm run types && npm run docs && npm run test",
+		"local-publish": "npm i -g ."
+	},
+	"keywords": [],
+	"author": "Benjamin Møller Jensen",
+	"license": "MIT"
+}

@@ -1,0 +1,56 @@
+{
+	"name": "ts-tag",
+	"private": true,
+	"version": "0.0.1",
+	"description": "Object.prototype.toString util",
+	"main": "index.js",
+	"module": "index.es.js",
+	"browser": "index.umd.js",
+	"scripts": {
+		"clean": "rimraf",
+		"test": "nyc mocha -r esm test.js && npm run clean .nyc_output && npm run clean coverage && npm run clean node_modules/.cache",
+		"minify": "jsmin -l 2 --overwrite index.js && jsmin -l 2 --overwrite index.umd.js && jsmin -l 2 --overwrite index.es.js",
+		"rollup": "rollup -c && npm run minify",
+		"types": "tsc index.js -d --allowJs --outFile index.d.ts --disableSizeLimit --emitDeclarationOnly --lib ESNext -m ESNext -t ESNext --pretty --esModuleInterop --allowSyntheticDefaultImports",
+		"docs:site": "documentation build main.js -f html -o docs",
+		"docs:md": "documentation build main.js -f md -o api.md",
+		"docs:readme": "documentation readme main.js --section=API",
+		"docs:serve": "documentation servetests.js",
+		"docs": "npm run docs:readme",
+		"build": "npm run rollup && npm run types && npm run docs && npm run test",
+		"local-publish": "npm i -g ."
+	},
+	"engines": {
+		"node": ">= 6.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bemoje/ts-tag.git"
+	},
+	"bugs": {
+		"url": "https://github.com/bemoje/bemoje-ts-tag/issues"
+	},
+	"author": {
+		"name": "Benjamin M. Jensen",
+		"email": "bemoje@gmail.com",
+		"url": "https://github.io/bemoje/"
+	},
+	"contributors": [
+		{
+			"name": "Benjamin M. Jensen",
+			"email": "bemoje@gmail.com",
+			"url": "https://github.io/bemoje/"
+		}
+	],
+	"keywords": [],
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"chai": "*",
+		"documentation": "*",
+		"esm": "*",
+		"jsmin": "*",
+		"mocha": "*",
+		"nyc": "*"
+	}
+}
