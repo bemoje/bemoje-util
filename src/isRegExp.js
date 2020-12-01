@@ -2,7 +2,7 @@ import { is } from './tsTag'
 const tsIsRegExp = is(RegExp)
 
 /**
- * Determine wheter the argument is a RegExp
+ * Determine wheter a given value is a RegExp
  * @param {*} value
  * @returns {boolean}
  */
@@ -17,5 +17,3 @@ export function isRegExp(value) {
 		typeof value.global === 'boolean'
 	)
 }
-
-export default isRegExp

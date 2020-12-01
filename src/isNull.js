@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a Null
+ * Determine wheter a given value is a Null
  * @param {*} value
  * @returns {boolean}
  */

@@ -15,27 +15,27 @@
 -   [classOf](#classof)
     -   [Parameters](#parameters-2)
     -   [Examples](#examples)
--   [getter](#getter)
+-   [defineGetter](#definegetter)
     -   [Parameters](#parameters-3)
     -   [Examples](#examples-1)
--   [defineLazyValue](#definelazyvalue)
+-   [defineAlias](#definealias)
     -   [Parameters](#parameters-4)
     -   [Examples](#examples-2)
--   [defineLoyalValue](#defineloyalvalue)
+-   [defineLazyValue](#definelazyvalue)
     -   [Parameters](#parameters-5)
     -   [Examples](#examples-3)
--   [method](#method)
+-   [defineLoyalValue](#defineloyalvalue)
     -   [Parameters](#parameters-6)
     -   [Examples](#examples-4)
--   [defineProperty](#defineproperty)
+-   [defineMethod](#definemethod)
     -   [Parameters](#parameters-7)
--   [setter](#setter)
-    -   [Parameters](#parameters-8)
     -   [Examples](#examples-5)
--   [defineValue](#definevalue)
+-   [defineProperty](#defineproperty)
+    -   [Parameters](#parameters-8)
+-   [defineSetter](#definesetter)
     -   [Parameters](#parameters-9)
     -   [Examples](#examples-6)
--   [defineAlias](#definealias)
+-   [defineValue](#definevalue)
     -   [Parameters](#parameters-10)
     -   [Examples](#examples-7)
 -   [DIRPATH](#dirpath)
@@ -240,13 +240,14 @@ classOf([])
 
 Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** 
 
-### getter
+### defineGetter
 
 A convenience method almost identical to @see Object.prototype.defineProperty except that the 'get' attribute can be
 set as arguments prior to the descriptor/attributes object.
 
 #### Parameters
 
+-   `target`  
 -   `key` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** The property key.
 -   `get` **([function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function) | any)?** The 'get' attribute of an own property descriptor. If 'get' is not a function, a
     function that returns the value is created and used in its place.
@@ -287,6 +288,49 @@ a.key
 
 Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** this
 
+### defineAlias
+
+Create property key aliases.
+
+If the object is a prototype object and no property exists on it by the name of 'key', it is assumed that it is meant
+to be found on its associated instances, in which case an accessor 'getter' property that returns the value at 'key'
+is created instead of a direct reference value. When aliasing instance properties, it makes sense to perform aliasing
+on the prototype like this, since it is 'cheaper' in terms of performance because then it's not necessary to create
+the alias-property on each instance, but just this once on the prototype.
+
+#### Parameters
+
+-   `target`  
+-   `key` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** The property key.
+-   `aliases` **...([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** Aliases for 'key'. (optional, default `[]`)
+
+#### Examples
+
+```javascript
+class A {
+  static analyze() {}
+
+  constructor() {
+    this.i = 0
+  }
+}
+
+
+defineAlias(A, 'analyze', 'analyse')
+
+A.analyze === A.analyse
+//=> true
+
+
+defineAlias(A.prototype, 'i', 'index')
+const a = new A()
+
+a.i === a.index
+//=> true
+```
+
+Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** this
+
 ### defineLazyValue
 
 Define a placeholder-accessor-property on the object such that the provided 'factory' function is not invoked until
@@ -305,6 +349,7 @@ define it lazily with 'defineLazyValue'.
 
 #### Parameters
 
+-   `target`  
 -   `key` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** The property key.
 -   `factory` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** A factory function that when invoked, returns the property value.
 -   `attributes` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Own boolean attributes of an property descriptor attributes. (optional, default `{}`)
@@ -401,6 +446,7 @@ the factory returned a fresh array. See the example.
 
 #### Parameters
 
+-   `target`  
 -   `key` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** The property key.
 -   `factory` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** A factory function that when invoked, returns the property value.
 -   `attributes` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Own boolean attributes of an property descriptor attributes. (optional, default `{}`)
@@ -442,7 +488,7 @@ B.prototype.instances
 
 Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** this
 
-### method
+### defineMethod
 
 A convenience method almost identical to @see Object.prototype.defineProperty except that the 'value' attribute can be
 set as argument, 'f' prior to the descriptor/attributes object.
@@ -453,6 +499,7 @@ inner description will become the function name.
 
 #### Parameters
 
+-   `target`  
 -   `key` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** The property key.
 -   `f` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** The 'value' attribute of an own property descriptor (expecting a function).
 -   `attributes` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Own boolean attributes of an property descriptor attributes. (optional, default `{}`)
@@ -511,13 +558,14 @@ Based on Reflect.defineProperty. The differences are:
 
 Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** this
 
-### setter
+### defineSetter
 
 A convenience method almost identical to @see Object.prototype.defineProperty except that the 'set' attribute can be
 set as arguments prior to the descriptor/attributes object.
 
 #### Parameters
 
+-   `target`  
 -   `key` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** The property key.
 -   `set` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)?** The 'set' attribute of an own property descriptor.
 -   `attributes` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Own boolean attributes of an property descriptor attributes. (optional, default `{}`)
@@ -564,6 +612,7 @@ set as arguments prior to the descriptor/attributes object.
 
 #### Parameters
 
+-   `target`  
 -   `key` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** The property key.
 -   `value` **any?** The 'value' attribute of an own property descriptor.
 -   `attributes` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Own boolean attributes of an property descriptor attributes. (optional, default `{}`)
@@ -579,49 +628,6 @@ set as arguments prior to the descriptor/attributes object.
 const o = {}
 console.log(defineValue(o, 'a', 23, { enumerable: true }))
 //=> { a: 23 }
-```
-
-Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** this
-
-### defineAlias
-
-Create property key aliases.
-
-If the object is a prototype object and no property exists on it by the name of 'key', it is assumed that it is meant
-to be found on its associated instances, in which case an accessor 'getter' property that returns the value at 'key'
-is created instead of a direct reference value. When aliasing instance properties, it makes sense to perform aliasing
-on the prototype like this, since it is 'cheaper' in terms of performance because then it's not necessary to create
-the alias-property on each instance, but just this once on the prototype.
-
-#### Parameters
-
--   `target`  
--   `key` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** The property key.
--   `aliases` **...([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol))** Aliases for 'key'. (optional, default `[]`)
-
-#### Examples
-
-```javascript
-class A {
-  static analyze() {}
-
-  constructor() {
-    this.i = 0
-  }
-}
-
-
-defineAlias(A, 'analyze', 'analyse')
-
-A.analyze === A.analyse
-//=> true
-
-
-defineAlias(A.prototype, 'i', 'index')
-const a = new A()
-
-a.i === a.index
-//=> true
 ```
 
 Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** this
@@ -744,7 +750,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isArray
 
-Determine wheter the argument is an array
+Determine wheter a given value is an array
 
 #### Parameters
 
@@ -754,7 +760,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isBigint
 
-Determine wheter the argument is a (typeof) bigint
+Determine wheter a given value is a (typeof) bigint
 
 #### Parameters
 
@@ -763,6 +769,8 @@ Determine wheter the argument is a (typeof) bigint
 Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ### isBoolean
+
+Determine wheter a given value is a Boolean
 
 #### Parameters
 
@@ -802,7 +810,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isDate
 
-Determine wheter the argument is a Date
+Determine wheter a given value is a Date
 
 #### Parameters
 
@@ -812,7 +820,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isDefined
 
-Determine wheter the argument is a Undefined
+Determine wheter a given value is a Undefined
 
 #### Parameters
 
@@ -822,7 +830,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isError
 
-Determine wheter the argument is a Error
+Determine wheter a given value is a Error
 
 #### Parameters
 
@@ -832,7 +840,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isFunction
 
-Determine wheter the argument is a Function
+Determine wheter a given value is a Function
 
 #### Parameters
 
@@ -852,7 +860,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isIterable
 
-Determine wheter the argument is an array
+Determine wheter a given value is an array
 
 #### Parameters
 
@@ -873,7 +881,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isNull
 
-Determine wheter the argument is a Null
+Determine wheter a given value is a Null
 
 #### Parameters
 
@@ -883,6 +891,8 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isNullOrUndefined
 
+Determine wheter a given value is a NullOrUndefined
+
 #### Parameters
 
 -   `value` **any** 
@@ -891,7 +901,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isNumber
 
-Determine wheter the argument is a Number
+Determine wheter a given value is a Number
 
 #### Parameters
 
@@ -901,7 +911,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isObject
 
-Determine wheter the argument is a Object
+Determine wheter a given value is a Object
 Definition summary: is typeof object but not null
 
 #### Parameters
@@ -912,7 +922,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isPrimitive
 
-Determine wheter the argument is a Primitive
+Determine wheter a given value is a Primitive
 
 #### Parameters
 
@@ -933,7 +943,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isRegExp
 
-Determine wheter the argument is a RegExp
+Determine wheter a given value is a RegExp
 
 #### Parameters
 
@@ -943,6 +953,8 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isString
 
+Determine wheter a given value is a String
+
 #### Parameters
 
 -   `value` **any** 
@@ -951,7 +963,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isSymbol
 
-Determine wheter the argument is a Symbol
+Determine wheter a given value is a Symbol
 
 #### Parameters
 
@@ -971,7 +983,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isUndefined
 
-Determine wheter the argument is undefined
+Determine wheter a given value is undefined
 
 #### Parameters
 
@@ -991,7 +1003,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### isWindow
 
-Determine wheter the argument is a browser's global object, 'window'
+Determine wheter a given value is a browser's global object, 'window'
 
 #### Parameters
 

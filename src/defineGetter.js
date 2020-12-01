@@ -5,7 +5,6 @@ import { defineProperty } from './defineProperty'
  * A convenience method almost identical to @see Object.prototype.defineProperty except that the 'get' attribute can be
  * set as arguments prior to the descriptor/attributes object.
  *
- * @method getter
  * @memberof Object.prototype
  *
  * @param {string|symbol} key - The property key.

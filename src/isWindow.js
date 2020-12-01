@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a browser's global object, 'window'
+ * Determine wheter a given value is a browser's global object, 'window'
  * @param {*} value
  * @returns {boolean}
  */

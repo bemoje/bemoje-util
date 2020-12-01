@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a Undefined
+ * Determine wheter a given value is a Undefined
  * @param {*} value
  * @returns {boolean}
  */

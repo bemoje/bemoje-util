@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is an array
+ * Determine wheter a given value is an array
  * @param {*} value
  * @returns {boolean}
  *

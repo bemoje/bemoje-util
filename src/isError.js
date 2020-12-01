@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a Error
+ * Determine wheter a given value is a Error
  * @param {*} value
  * @returns {boolean}
  */

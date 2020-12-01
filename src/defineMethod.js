@@ -10,9 +10,6 @@ import { Method } from './Method'
  * not a named function, then its name will be set to that of 'key', unless 'key' is a symbol type, then the symbol's
  * inner description will become the function name.
  *
- * @method method
- * @memberof Object.prototype
- *
  * @param {string|symbol} key - The property key.
  * @param {function} f - The 'value' attribute of an own property descriptor (expecting a function).
  * @param {object} [attributes={}] - Own boolean attributes of an property descriptor attributes.

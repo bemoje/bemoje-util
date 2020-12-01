@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a Function
+ * Determine wheter a given value is a Function
  * @param {*} value
  * @returns {boolean}
  */

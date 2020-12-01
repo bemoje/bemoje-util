@@ -3,7 +3,7 @@ import { is } from './tsTag'
 const tsIsDate = is(RegExp)
 
 /**
- * Determine wheter the argument is a Date
+ * Determine wheter a given value is a Date
  * @param {*} value
  * @returns {boolean}
  */

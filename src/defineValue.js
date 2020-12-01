@@ -4,9 +4,6 @@ import { defineProperty } from './defineProperty'
  * A convenience method almost identical to @see Object.prototype.defineProperty except that the 'value' attribute can be
  * set as arguments prior to the descriptor/attributes object.
  *
- * @method defineValue
- * @memberof Object.prototype
- *
  * @param {string|symbol} key - The property key.
  * @param {*} [value] - The 'value' attribute of an own property descriptor.
  * @param {object} [attributes={}] - Own boolean attributes of an property descriptor attributes.

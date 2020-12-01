@@ -16,9 +16,6 @@ import { defineProperty } from './defineProperty'
  * One might be interested in setting a property on all instances of a class, but not until it is needed. So we can
  * define it lazily with 'defineLazyValue'.
  *
- * @method defineLazyValue
- * @memberof Object.prototype
- *
  * @param {string|symbol} key - The property key.
  * @param {function} factory - A factory function that when invoked, returns the property value.
  * @param {object} [attributes={}] - Own boolean attributes of an property descriptor attributes.

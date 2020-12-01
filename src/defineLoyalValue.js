@@ -13,9 +13,6 @@ import { defineProperty } from './defineProperty'
  * because the new context is the sub-class. Then a new array could be created instead of pointing to the original if
  * the factory returned a fresh array. See the example.
  *
- * @method defineLoyalValue
- * @memberof Object.prototype
- *
  * @param {string|symbol} key - The property key.
  * @param {function} factory - A factory function that when invoked, returns the property value.
  * @param {object} [attributes={}] - Own boolean attributes of an property descriptor attributes.

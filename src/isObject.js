@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a Object
+ * Determine wheter a given value is a Object
  * Definition summary: is typeof object but not null
  * @param {*} value
  * @returns {boolean}

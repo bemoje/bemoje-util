@@ -58,9 +58,19 @@
               
                 
                 <li><a
-                  href='#getter'
+                  href='#definegetter'
                   class="">
-                  getter
+                  defineGetter
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#definealias'
+                  class="">
+                  defineAlias
                   
                 </a>
                 
@@ -88,9 +98,9 @@
               
                 
                 <li><a
-                  href='#method'
+                  href='#definemethod'
                   class="">
-                  method
+                  defineMethod
                   
                 </a>
                 
@@ -108,9 +118,9 @@
               
                 
                 <li><a
-                  href='#setter'
+                  href='#definesetter'
                   class="">
-                  setter
+                  defineSetter
                   
                 </a>
                 
@@ -121,16 +131,6 @@
                   href='#definevalue'
                   class="">
                   defineValue
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#definealias'
-                  class="">
-                  defineAlias
                   
                 </a>
                 
@@ -991,8 +991,8 @@ classOf([])
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='getter'>
-      getter
+    <h3 class='fl m0' id='definegetter'>
+      defineGetter
     </h3>
     
     
@@ -1002,7 +1002,7 @@ classOf([])
   <p>A convenience method almost identical to @see Object.prototype.defineProperty except that the 'get' attribute can be
 set as arguments prior to the descriptor/attributes object.</p>
 
-    <div class='pre p1 fill-light mt0'>getter(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), get: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a> | any)?, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+    <div class='pre p1 fill-light mt0'>defineGetter(target: any, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), get: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a> | any)?, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
   
   
 
@@ -1016,6 +1016,14 @@ set as arguments prior to the descriptor/attributes object.</p>
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -1159,6 +1167,126 @@ a.key
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='definealias'>
+      defineAlias
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create property key aliases.</p>
+<p>If the object is a prototype object and no property exists on it by the name of 'key', it is assumed that it is meant
+to be found on its associated instances, in which case an accessor 'getter' property that returns the value at 'key'
+is created instead of a direct reference value. When aliasing instance properties, it makes sense to perform aliasing
+on the prototype like this, since it is 'cheaper' in terms of performance because then it's not necessary to create
+the alias-property on each instance, but just this once on the prototype.</p>
+
+    <div class='pre p1 fill-light mt0'>defineAlias(target: any, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), aliases: ...(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
+	    The property key.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>aliases</span> <code class='quiet'>(...(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>)
+            = <code>[]</code>)</code>
+	    Aliases for 'key'.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        this
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">static</span> analyze() {}
+
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">this</span>.i = <span class="hljs-number">0</span>
+  }
+}
+
+
+defineAlias(A, <span class="hljs-string">'analyze'</span>, <span class="hljs-string">'analyse'</span>)
+
+A.analyze === A.analyse
+<span class="hljs-comment">//=&gt; true</span>
+
+
+defineAlias(A.prototype, <span class="hljs-string">'i'</span>, <span class="hljs-string">'index'</span>)
+<span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> A()
+
+a.i === a.index
+<span class="hljs-comment">//=&gt; true</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='definelazyvalue'>
       defineLazyValue
     </h3>
@@ -1179,7 +1307,7 @@ instead be set on the object that at the time is the execution context ('this').
 One might be interested in setting a property on all instances of a class, but not until it is needed. So we can
 define it lazily with 'defineLazyValue'.</p>
 
-    <div class='pre p1 fill-light mt0'>defineLazyValue(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), factory: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+    <div class='pre p1 fill-light mt0'>defineLazyValue(target: any, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), factory: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
   
   
 
@@ -1193,6 +1321,14 @@ define it lazily with 'defineLazyValue'.</p>
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -1395,7 +1531,7 @@ desired, this is where 'defineLoyalValue' is handy. If the execution context has
 because the new context is the sub-class. Then a new array could be created instead of pointing to the original if
 the factory returned a fresh array. See the example.</p>
 
-    <div class='pre p1 fill-light mt0'>defineLoyalValue(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), factory: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+    <div class='pre p1 fill-light mt0'>defineLoyalValue(target: any, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), factory: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
   
   
 
@@ -1409,6 +1545,14 @@ the factory returned a fresh array. See the example.</p>
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -1551,8 +1695,8 @@ B.prototype.instances
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='method'>
-      method
+    <h3 class='fl m0' id='definemethod'>
+      defineMethod
     </h3>
     
     
@@ -1565,7 +1709,7 @@ set as argument, 'f' prior to the descriptor/attributes object.</p>
 not a named function, then its name will be set to that of 'key', unless 'key' is a symbol type, then the symbol's
 inner description will become the function name.</p>
 
-    <div class='pre p1 fill-light mt0'>method(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), f: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+    <div class='pre p1 fill-light mt0'>defineMethod(target: any, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), f: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
   
   
 
@@ -1579,6 +1723,14 @@ inner description will become the function name.</p>
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -1886,8 +2038,8 @@ removed from the descriptor. This would cause an error, so this is just a conven
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='setter'>
-      setter
+    <h3 class='fl m0' id='definesetter'>
+      defineSetter
     </h3>
     
     
@@ -1897,7 +2049,7 @@ removed from the descriptor. This would cause an error, so this is just a conven
   <p>A convenience method almost identical to @see Object.prototype.defineProperty except that the 'set' attribute can be
 set as arguments prior to the descriptor/attributes object.</p>
 
-    <div class='pre p1 fill-light mt0'>setter(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), set: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>?, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+    <div class='pre p1 fill-light mt0'>defineSetter(target: any, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), set: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>?, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
   
   
 
@@ -1911,6 +2063,14 @@ set as arguments prior to the descriptor/attributes object.</p>
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -2064,7 +2224,7 @@ a.key
   <p>A convenience method almost identical to @see Object.prototype.defineProperty except that the 'value' attribute can be
 set as arguments prior to the descriptor/attributes object.</p>
 
-    <div class='pre p1 fill-light mt0'>defineValue(key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), value: any?, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+    <div class='pre p1 fill-light mt0'>defineValue(target: any, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), value: any?, attributes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
   
   
 
@@ -2078,6 +2238,14 @@ set as arguments prior to the descriptor/attributes object.</p>
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -2180,126 +2348,6 @@ removed from the descriptor. This would cause an error, so this is just a conven
       <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> o = {}
 <span class="hljs-built_in">console</span>.log(defineValue(o, <span class="hljs-string">'a'</span>, <span class="hljs-number">23</span>, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span> }))
 <span class="hljs-comment">//=&gt; { a: 23 }</span></pre>
-    
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='definealias'>
-      defineAlias
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Create property key aliases.</p>
-<p>If the object is a prototype object and no property exists on it by the name of 'key', it is assumed that it is meant
-to be found on its associated instances, in which case an accessor 'getter' property that returns the value at 'key'
-is created instead of a direct reference value. When aliasing instance properties, it makes sense to perform aliasing
-on the prototype like this, since it is 'cheaper' in terms of performance because then it's not necessary to create
-the alias-property on each instance, but just this once on the prototype.</p>
-
-    <div class='pre p1 fill-light mt0'>defineAlias(target: any, key: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>), aliases: ...(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>key</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>))</code>
-	    The property key.
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>aliases</span> <code class='quiet'>(...(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>)
-            = <code>[]</code>)</code>
-	    Aliases for 'key'.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
-        this
-
-      
-    
-  
-
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
-  <span class="hljs-keyword">static</span> analyze() {}
-
-  <span class="hljs-keyword">constructor</span>() {
-    <span class="hljs-keyword">this</span>.i = <span class="hljs-number">0</span>
-  }
-}
-
-
-defineAlias(A, <span class="hljs-string">'analyze'</span>, <span class="hljs-string">'analyse'</span>)
-
-A.analyze === A.analyse
-<span class="hljs-comment">//=&gt; true</span>
-
-
-defineAlias(A.prototype, <span class="hljs-string">'i'</span>, <span class="hljs-string">'index'</span>)
-<span class="hljs-keyword">const</span> a = <span class="hljs-keyword">new</span> A()
-
-a.i === a.index
-<span class="hljs-comment">//=&gt; true</span></pre>
     
   
 
@@ -2971,7 +3019,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is an array</p>
+  <p>Determine wheter a given value is an array</p>
 
     <div class='pre p1 fill-light mt0'>isArray</div>
   
@@ -3042,7 +3090,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is a (typeof) bigint</p>
+  <p>Determine wheter a given value is a (typeof) bigint</p>
 
     <div class='pre p1 fill-light mt0'>isBigint(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -3113,7 +3161,8 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  
+  <p>Determine wheter a given value is a Boolean</p>
+
     <div class='pre p1 fill-light mt0'>isBoolean(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
   
@@ -3396,7 +3445,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is a Date</p>
+  <p>Determine wheter a given value is a Date</p>
 
     <div class='pre p1 fill-light mt0'>isDate(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -3467,7 +3516,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is a Undefined</p>
+  <p>Determine wheter a given value is a Undefined</p>
 
     <div class='pre p1 fill-light mt0'>isDefined(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -3538,7 +3587,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is a Error</p>
+  <p>Determine wheter a given value is a Error</p>
 
     <div class='pre p1 fill-light mt0'>isError(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -3609,7 +3658,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is a Function</p>
+  <p>Determine wheter a given value is a Function</p>
 
     <div class='pre p1 fill-light mt0'>isFunction(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -3751,7 +3800,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is an array</p>
+  <p>Determine wheter a given value is an array</p>
 
     <div class='pre p1 fill-light mt0'>isIterable(v: any, value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -3902,7 +3951,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is a Null</p>
+  <p>Determine wheter a given value is a Null</p>
 
     <div class='pre p1 fill-light mt0'>isNull(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -3973,7 +4022,8 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  
+  <p>Determine wheter a given value is a NullOrUndefined</p>
+
     <div class='pre p1 fill-light mt0'>isNullOrUndefined(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
   
@@ -4043,7 +4093,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is a Number</p>
+  <p>Determine wheter a given value is a Number</p>
 
     <div class='pre p1 fill-light mt0'>isNumber(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -4114,7 +4164,7 @@ This object is set on the global object, so that it can always be referencéd as
   </div>
   
 
-  <p>Determine wheter the argument is a Object
+  <p>Determine wheter a given value is a Object
 Definition summary: is typeof object but not null</p>
 
     <div class='pre p1 fill-light mt0'>isObject(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
@@ -4186,7 +4236,7 @@ Definition summary: is typeof object but not null</p>
   </div>
   
 
-  <p>Determine wheter the argument is a Primitive</p>
+  <p>Determine wheter a given value is a Primitive</p>
 
     <div class='pre p1 fill-light mt0'>isPrimitive(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -4329,7 +4379,7 @@ Definition summary: obj.constructor.prototype === obj</p>
   </div>
   
 
-  <p>Determine wheter the argument is a RegExp</p>
+  <p>Determine wheter a given value is a RegExp</p>
 
     <div class='pre p1 fill-light mt0'>isRegExp(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -4400,7 +4450,8 @@ Definition summary: obj.constructor.prototype === obj</p>
   </div>
   
 
-  
+  <p>Determine wheter a given value is a String</p>
+
     <div class='pre p1 fill-light mt0'>isString(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
   
@@ -4470,7 +4521,7 @@ Definition summary: obj.constructor.prototype === obj</p>
   </div>
   
 
-  <p>Determine wheter the argument is a Symbol</p>
+  <p>Determine wheter a given value is a Symbol</p>
 
     <div class='pre p1 fill-light mt0'>isSymbol(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -4612,7 +4663,7 @@ Definition summary: obj.constructor.prototype === obj</p>
   </div>
   
 
-  <p>Determine wheter the argument is undefined</p>
+  <p>Determine wheter a given value is undefined</p>
 
     <div class='pre p1 fill-light mt0'>isUndefined(value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
@@ -4755,7 +4806,7 @@ Definition summary: obj.constructor.prototype === obj</p>
   </div>
   
 
-  <p>Determine wheter the argument is a browser's global object, 'window'</p>
+  <p>Determine wheter a given value is a browser's global object, 'window'</p>
 
     <div class='pre p1 fill-light mt0'>isWindow(v: any, value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   

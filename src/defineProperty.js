@@ -10,9 +10,6 @@ import { isPrototype } from './isPrototype'
  * - returns 'target' object unless thats a prototype object, then return target.constructor
  * - disallows defining enumerable properties on prototype objects
  *
- * @method defineProperty
- * @memberof Object.prototype
- *
  * @param {Object} target - The target object
  * @param {string|symbol} key - The property key.
  * @param {object} [descriptor={}] - The own property descriptor.

@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a Number
+ * Determine wheter a given value is a Number
  * @param {*} value
  * @returns {boolean}
  */

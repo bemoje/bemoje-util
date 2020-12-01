@@ -28,7 +28,7 @@
 	},
 	"scripts": {
 		"generate-index": "node -r esm scripts/generateIndex.js",
-		"types": "npx tsc src/index.js -d --allowJs --rootDir src --outFile TYPINGS.d.ts --disableSizeLimit --emitDeclarationOnly --lib ESNext -m ESNext -t ESNext --isolatedModules --pretty --esModuleInterop --allowSyntheticDefaultImports",
+		"types": "npx tsc src/index.js -d --allowJs --rootDir src --outFile TYPINGS.d.ts --disableSizeLimit --emitDeclarationOnly --lib ESNext -m ESNext -t ESNext --pretty --esModuleInterop --allowSyntheticDefaultImports",
 		"docs:site": "documentation build src/index.js -f html -o docs",
 		"docs:md": "documentation build src/index.js -f md -o api.md",
 		"docs:readme": "documentation readme src/index.js --section=API",

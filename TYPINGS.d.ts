@@ -1,6 +1,6 @@
 declare module "isDefined" {
     /**
-     * Determine wheter the argument is a Undefined
+     * Determine wheter a given value is a Undefined
      * @param {*} value
      * @returns {boolean}
      */
@@ -8,7 +8,7 @@ declare module "isDefined" {
 }
 declare module "isFunction" {
     /**
-     * Determine wheter the argument is a Function
+     * Determine wheter a given value is a Function
      * @param {*} value
      * @returns {boolean}
      */
@@ -16,7 +16,7 @@ declare module "isFunction" {
 }
 declare module "isSymbol" {
     /**
-     * Determine wheter the argument is a Symbol
+     * Determine wheter a given value is a Symbol
      * @param {*} value
      * @returns {boolean}
      */
@@ -48,7 +48,7 @@ declare module "paramNames" {
 }
 declare module "isObject" {
     /**
-     * Determine wheter the argument is a Object
+     * Determine wheter a given value is a Object
      * Definition summary: is typeof object but not null
      * @param {*} value
      * @returns {boolean}
@@ -178,7 +178,7 @@ declare module "autoPackage" {
 }
 declare module "isUndefined" {
     /**
-     * Determine wheter the argument is undefined
+     * Determine wheter a given value is undefined
      * @param {*} value
      * @returns {boolean}
      */
@@ -187,11 +187,9 @@ declare module "isUndefined" {
 }
 declare module "isString" {
     /**
-     * @method isString
-     * Determine wheter the argument is a String
+     * Determine wheter a given value is a String
      * @param {*} value
      * @returns {boolean}
-     * @tag util is core bemoje
      */
     export function isString(value: any): boolean;
     export default isString;
@@ -203,9 +201,6 @@ declare module "defineProperty" {
      * - writable removed from descriptor if has accessors
      * - returns 'target' object unless thats a prototype object, then return target.constructor
      * - disallows defining enumerable properties on prototype objects
-     *
-     * @method defineProperty
-     * @memberof Object.prototype
      *
      * @param {Object} target - The target object
      * @param {string|symbol} key - The property key.
@@ -233,9 +228,6 @@ declare module "defineValue" {
     /**
      * A convenience method almost identical to @see Object.prototype.defineProperty except that the 'value' attribute can be
      * set as arguments prior to the descriptor/attributes object.
-     *
-     * @method defineValue
-     * @memberof Object.prototype
      *
      * @param {string|symbol} key - The property key.
      * @param {*} [value] - The 'value' attribute of an own property descriptor.
@@ -321,9 +313,6 @@ declare module "defineLoyalValue" {
      * desired, this is where 'defineLoyalValue' is handy. If the execution context has changed, and in this case it has,
      * because the new context is the sub-class. Then a new array could be created instead of pointing to the original if
      * the factory returned a fresh array. See the example.
-     *
-     * @method defineLoyalValue
-     * @memberof Object.prototype
      *
      * @param {string|symbol} key - The property key.
      * @param {function} factory - A factory function that when invoked, returns the property value.
@@ -425,9 +414,6 @@ declare module "defineMethod" {
      * If 'f' is a named function, then the 'key' argument can be omitted entirely. If key is not omitted and 'f' is
      * not a named function, then its name will be set to that of 'key', unless 'key' is a symbol type, then the symbol's
      * inner description will become the function name.
-     *
-     * @method method
-     * @memberof Object.prototype
      *
      * @param {string|symbol} key - The property key.
      * @param {function} f - The 'value' attribute of an own property descriptor (expecting a function).
@@ -543,7 +529,6 @@ declare module "defineGetter" {
      * A convenience method almost identical to @see Object.prototype.defineProperty except that the 'get' attribute can be
      * set as arguments prior to the descriptor/attributes object.
      *
-     * @method getter
      * @memberof Object.prototype
      *
      * @param {string|symbol} key - The property key.
@@ -590,7 +575,7 @@ declare module "defineGetter" {
 }
 declare module "isPrimitive" {
     /**
-     * Determine wheter the argument is a Primitive
+     * Determine wheter a given value is a Primitive
      * @param {*} value
      * @returns {boolean}
      * @tag util is core bemoje
@@ -613,9 +598,6 @@ declare module "defineLazyValue" {
      * instead be set on the object that at the time is the execution context ('this'). This is most likely the use case.
      * One might be interested in setting a property on all instances of a class, but not until it is needed. So we can
      * define it lazily with 'defineLazyValue'.
-     *
-     * @method defineLazyValue
-     * @memberof Object.prototype
      *
      * @param {string|symbol} key - The property key.
      * @param {function} factory - A factory function that when invoked, returns the property value.
@@ -706,9 +688,6 @@ declare module "defineSetter" {
      * A convenience method almost identical to @see Object.prototype.defineProperty except that the 'set' attribute can be
      * set as arguments prior to the descriptor/attributes object.
      *
-     * @method setter
-     * @memberof Object.prototype
-     *
      * @param {string|symbol} key - The property key.
      * @param {function} [set] - The 'set' attribute of an own property descriptor.
      * @param {object} [attributes={}] - Own boolean attributes of an property descriptor attributes.
@@ -787,7 +766,7 @@ declare module "isArguments" {
 }
 declare module "isArray" {
     /**
-     * Determine wheter the argument is an array
+     * Determine wheter a given value is an array
      * @param {*} value
      * @returns {boolean}
      */
@@ -799,7 +778,7 @@ declare module "isArrayLike" {
 }
 declare module "isBigint" {
     /**
-     * Determine wheter the argument is a (typeof) bigint
+     * Determine wheter a given value is a (typeof) bigint
      * @param {*} value
      * @returns {boolean}
      */
@@ -808,11 +787,9 @@ declare module "isBigint" {
 }
 declare module "isBoolean" {
     /**
-     * @method isBoolean
-     * Determine wheter the argument is a Boolean
+     * Determine wheter a given value is a Boolean
      * @param {*} value
      * @returns {boolean}
-     * @tag util is core bemoje
      */
     export function isBoolean(value: any): boolean;
     export default isBoolean;
@@ -997,7 +974,7 @@ declare module "tsTag" {
 }
 declare module "isDate" {
     /**
-     * Determine wheter the argument is a Date
+     * Determine wheter a given value is a Date
      * @param {*} value
      * @returns {boolean}
      */
@@ -1006,7 +983,7 @@ declare module "isDate" {
 }
 declare module "isError" {
     /**
-     * Determine wheter the argument is a Error
+     * Determine wheter a given value is a Error
      * @param {*} value
      * @returns {boolean}
      */
@@ -1031,7 +1008,7 @@ declare module "isIntegerString" {
 }
 declare module "isIterable" {
     /**
-     * Determine wheter the argument is an array
+     * Determine wheter a given value is an array
      * @param {*} value
      * @returns {boolean}
      *
@@ -1051,7 +1028,7 @@ declare module "isKey" {
 }
 declare module "isNull" {
     /**
-     * Determine wheter the argument is a Null
+     * Determine wheter a given value is a Null
      * @param {*} value
      * @returns {boolean}
      */
@@ -1060,18 +1037,16 @@ declare module "isNull" {
 }
 declare module "isNullOrUndefined" {
     /**
-     * @method isNullOrUndefined
-     * Determine wheter the argument is a NullOrUndefined
+     * Determine wheter a given value is a NullOrUndefined
      * @param {*} value
      * @returns {boolean}
-     * @tag util is core bemoje
      */
     export function isNullOrUndefined(value: any): boolean;
     export default isNullOrUndefined;
 }
 declare module "isNumber" {
     /**
-     * Determine wheter the argument is a Number
+     * Determine wheter a given value is a Number
      * @param {*} value
      * @returns {boolean}
      */
@@ -1084,12 +1059,11 @@ declare module "isPlainObject" {
 }
 declare module "isRegExp" {
     /**
-     * Determine wheter the argument is a RegExp
+     * Determine wheter a given value is a RegExp
      * @param {*} value
      * @returns {boolean}
      */
     export function isRegExp(value: any): boolean;
-    export default isRegExp;
 }
 declare module "isTypedArray" {
     /**
@@ -1111,7 +1085,7 @@ declare module "isValidLength" {
 }
 declare module "isWindow" {
     /**
-     * Determine wheter the argument is a browser's global object, 'window'
+     * Determine wheter a given value is a browser's global object, 'window'
      * @param {*} value
      * @returns {boolean}
      */

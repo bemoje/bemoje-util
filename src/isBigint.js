@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a (typeof) bigint
+ * Determine wheter a given value is a (typeof) bigint
  * @param {*} value
  * @returns {boolean}
  */

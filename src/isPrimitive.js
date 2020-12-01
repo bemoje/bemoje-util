@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a Primitive
+ * Determine wheter a given value is a Primitive
  * @param {*} value
  * @returns {boolean}
  * @tag util is core bemoje

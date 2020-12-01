@@ -1,5 +1,5 @@
 /**
- * Determine wheter the argument is a Symbol
+ * Determine wheter a given value is a Symbol
  * @param {*} value
  * @returns {boolean}
  */
